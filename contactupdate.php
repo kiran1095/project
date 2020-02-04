@@ -1,17 +1,14 @@
 
 <?php
 
-$link = mysqli_connect("localhost", "root", "Welcome*123", "reg");
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+include("database.php");
 session_start();
 $name=$_SESSION["name"];
 $phone = mysqli_real_escape_string($link, $_REQUEST['phone']);
-echo $phone;
+//echo $phone;
+$date = date("Y-m-d h:i:s",time());
 
-$sql = "UPDATE sample SET telephone='$phone' WHERE name='$name'";
+$sql = "UPDATE user SET telephone='$phone',update_time='$date' WHERE name='$name'";
 
 if (mysqli_query($link, $sql)==TRUE) {
     echo "Record updated successfully";
@@ -20,7 +17,5 @@ if (mysqli_query($link, $sql)==TRUE) {
 else {
     echo "Error updating record: " . mysqli_error($link);
 }
-
-mysqli_close($link);
 ?>
 

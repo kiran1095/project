@@ -1,5 +1,15 @@
 <html>
-<head><title>JavaScript Captcha Example</title></head>
+<head><title>JavaScript Captcha Example</title>
+<style>
+div {
+  background-color: lightgray;
+  width: 600px;
+  border: 400px;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+</head>
 <body onload="generateCaptcha()">
  
 <script>
@@ -26,6 +36,7 @@ function validate()
 	var password = document.forms["RegForm"]["password"];
 	var cpassword = document.forms["RegForm"]["cpassword"];	
 	var address = document.forms["RegForm"]["address"]; 
+	var query = document.forms["RegForm"]["query"]; 
 	var input=document.getElementById("userans");
 
 	if (name.value == "")								 
@@ -71,6 +82,12 @@ function validate()
 		window.alert("Please enter your telephone number."); 
 		phone.focus(); 
 		return false; 
+	}
+	if (query.value == "")						 
+	{ 
+		window.alert("Please enter your answer for the query."); 
+		query.focus(); 
+		return false; 
 	} 
 	if (what.selectedIndex < 0)				 
 	{ 
@@ -78,7 +95,6 @@ function validate()
 		what.focus(); 
 		return false; 
 	} 
-	//generateCaptcha();
 	if(input.value!=ans){
 		window.alert("entered capche is wrong");
 		return false;
@@ -93,24 +109,26 @@ function validate()
  
 	//}
 </script>
+<center>
+<div>
 <form name="RegForm" action="reg4.php" onsubmit="return validate()" method="post"> 
 <table>
 	<tr>
 	<tr><h1><center>REGISTRATION PAGE</center></h1></tr>
-	<tr><td>name:</td> <td><input type="text" size=65 name="name"> </td></tr>	
-	<tr><td>email Address: </td> <td><input type="text" size=65 name="email"> </td></tr>
-	<tr><td>password: </td> <td><input type="password" size=65 name="password"> </td></tr>
-	<tr><td>confirm_password: </td> <td><input type="password" size=65 name="cpassword"> </td></tr>
-	<tr><td>address: </td> <td><input type="text" size=65 name="address"> </td></tr> 
-	<tr><td>telephone:</td> <td> <input type="text" size=65 name="telephone"> </td></tr>
+	<tr><td>name:</td> <td><input type="text" size=30 name="name"> </td></tr>	
+	<tr><td>email Address: </td> <td><input type="text" size=30 name="email"> </td></tr>
+	<tr><td>password: </td> <td><input type="password" size=30 name="password"> </td></tr>
+	<tr><td>confirm_password: </td> <td><input type="password" size=30 name="cpassword"> </td></tr>
+	<tr><td>address: </td> <td><input type="text" size=30 name="address"> </td></tr> 
+	<tr><td>telephone:</td> <td> <input type="text" size=30 name="telephone"> </td></tr>
 	<tr><td>SELECT YOUR STREAM </td> <td>
 		<select type="text" value="" name="subject"> 
 			<option>BACKEND</option> 
 			<option>FRONTEND</option> 
 			<option>DATAENGINEER</option>   
 		</select></td></tr>
-	<tr><td>comments:</td> <td> <textarea cols="50" name="comment"> </textarea></td> </tr>
-		
+	<tr><td>comments:</td> <td> <textarea cols="30" name="comment"> </textarea></td> </tr>
+	<tr><td>what is your favourite name?</td><td><input type="text" name="query"></td></tr>	
  <tr><td><input type="text" id="captcha" disabled/></td><td><input type="text" id="userans"/></td></tr>
 <tr><td><button onclick="generateCaptcha()">Refresh</button></td></tr>
 <tr> <td><input type="submit" value="submit" name="Submit" >	</td> </tr>
@@ -118,5 +136,7 @@ function validate()
 	</tr>
 </table>
  </form>
+</center>
+</div>
 </body>
 </html>
