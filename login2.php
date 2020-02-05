@@ -23,8 +23,8 @@ div {
            <tr><td>password:</td><td><input type="password" name="password"/></td></tr>
  
           <tr><td><input type="submit" name="submit" value="submit"/></td> 
-          <td><a href="./project/query.php">forgot password</a></td>
-	  <td><a href="./project/registration.html">new user</a></td></tr>
+          <td><a href="./query.php">forgot password</a></td>
+	  <td><a href="./registration.html">new user</a></td></tr>
 	</tr>
 	</table>
 </div> 
