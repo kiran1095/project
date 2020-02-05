@@ -1,11 +1,11 @@
 <?php
 include("database.php");
 session_start();
- $name=$_SESSION['name'];
+ $email=$_SESSION['email'];
  
 //To delete the user profile
 echo $name;
-$sql = "UPDATE user SET flag=0 WHERE name='$name'";
+$sql = "UPDATE profile SET delete_flag=0 WHERE email='$email'";
 if(mysqli_query($link,$sql)==TRUE){
     echo "Records were deleted successfully.";
 	header("location: home.html");

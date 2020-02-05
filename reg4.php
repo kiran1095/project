@@ -17,7 +17,7 @@ $flag=1;
 $rs=mysqli_query($link,"select * from user where email='$email'");
 	if(mysqli_num_rows($rs)>0)
 	{
-		echo "already username existed";
+		echo '<script>alert("already email existed")</script>';
 	}
 else
 {	
