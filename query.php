@@ -34,7 +34,7 @@ if(isset($submit)){
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $query = mysqli_real_escape_string($link, $_REQUEST['query']);
 
-	$rs=mysqli_query($link,"select * from profile where email='$email' and query_ans='$query' and delete_flag=1");
+	$rs=mysqli_query($link,"select * from profilev2 where email='$email' and query_ans='$query' and delete_flag=1");
 	if(mysqli_num_rows($rs)==1)
 	{
 		echo '<script>alert("password changed completed")</script>';

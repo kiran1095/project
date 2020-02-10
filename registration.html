@@ -1,5 +1,5 @@
 <html>
-<head><title>JavaScript Captcha Example</title>
+<head><title>registration</title>
 <style>
 div {
   background-color: lightgray;
@@ -111,28 +111,28 @@ function validate()
 </script>
 <center>
 <div>
-<form name="RegForm" action="reg4.php" onsubmit="return validate()" method="post"> 
+<form name="RegForm" action="reg.php" onsubmit="return validate()" method="post"> 
 <table>
 	<tr>
-	<tr><h1><center>REGISTRATION PAGE</center></h1></tr>
-	<tr><td>name:</td> <td><input type="text" size=30 name="name"> </td></tr>	
-	<tr><td>email Address: </td> <td><input type="text" size=30 name="email"> </td></tr>
-	<tr><td>password: </td> <td><input type="password" size=30 name="password"> </td></tr>
-	<tr><td>confirm_password: </td> <td><input type="password" size=30 name="cpassword"> </td></tr>
-	<tr><td>address: </td> <td><input type="text" size=30 name="address"> </td></tr> 
-	<tr><td>telephone:</td> <td> <input type="text" size=30 name="telephone"> </td></tr>
-	<tr><td>SELECT YOUR STREAM </td> <td>
+	<tr><h1><center>REGISTRATION</center></h1></tr><hr>
+	<tr><td>Name:</td> <td><input type="text" size=30 name="name"> </td></tr>	
+	<tr><td>Email-ID: </td> <td><input type="text" size=30 name="email"> </td></tr>
+	<tr><td>Password: </td> <td><input type="password" size=30 name="password"> </td></tr>
+	<tr><td>Confirm-Password: </td> <td><input type="password" size=30 name="cpassword"> </td></tr>
+	<tr><td>Address: </td> <td><input type="text" size=30 name="address"> </td></tr> 
+	<tr><td>Telephone:</td> <td> <input type="text" size=30 name="telephone"> </td></tr>
+	<tr><td>Select Stream </td> <td>
 		<select type="text" value="" name="subject"> 
 			<option>BACKEND</option> 
 			<option>FRONTEND</option> 
 			<option>DATAENGINEER</option>   
 		</select></td></tr>
-	<tr><td>comments:</td> <td> <textarea cols="30" name="comment"> </textarea></td> </tr>
-	<tr><td>what is your favourite name?</td><td><input type="text" name="query"></td></tr>	
+	<tr><td>Comments:</td> <td> <textarea cols="30" name="comment"> </textarea></td> </tr>
+	<tr><td>What is your favourite name?</td><td><input type="text" name="query"></td></tr>	
  <tr><td><input type="text" id="captcha" disabled/></td><td><input type="text" id="userans"/></td></tr>
-<tr><td><button onclick="generateCaptcha()">Refresh</button></td></tr>
-<tr> <td>   </td><td><input type="submit" value="submit" name="Submit" >	</td> </tr>
-<tr><td>   </td><td>Already a user<a href="./login2.php">LOGIN</a></tr></td>
+<tr><td><input type="button" type="Refresh"value="Refresh" name="refresh" onclick="generateCaptcha()" ></td></tr>
+<tr> <td>   </td><td><input type="submit" value="Submit" name="Submit" >	</td> </tr>
+<tr><td>   </td><td>Already a user<a href="./login.php">LOGIN</a></tr></td>
 	</tr>
 </table>
  </form>

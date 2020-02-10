@@ -1,0 +1,44 @@
+
+//to create a table with primary key constraints and not null constraints
+create table tablename(id int primary key,name varchar(20) NOT NULL,email varchar(20) NOT NULL UNIQUE,password varchar(20)NOT NULL);
+
+
+//to create a table if not exists
+create table if not exists tablename(id type,name type);
+
+
+
+//to update 
+UPDATE tablename SET (column_name)address=' ' WHERE (to find that row in table primary key)email=' ';
+
+
+
+
+//to find a pattern
+
+1)select * from tablename where column_name like '[a||e||i||o||u]%';
+2)select * from tablename where column_name regexp '[aeiou].*';
+
+//to drop
+drop table tablename;
+
+
+
+//to remove records in a table
+
+truncate tablename;
+
+
+//ALTER commands
+
+1)alter table tablename drop column_name;
+2)alter table tablename add columnname datatype;
+3)alter table tablename add constraint constraint_name columnname constraint;
+4)alter table tablename modify columnname datatype  (to modify the datatype)
+
+
+
+//to make datetime default null
+create table tablename(create_time datetime default NULL on update current_TIMESTAMP);
+
+

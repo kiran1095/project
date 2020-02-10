@@ -12,7 +12,7 @@ $date = date("Y-m-d h:i:s",time());
 
 
 if($phone!=""){
-$sql = "UPDATE profile SET telephone='$phone',modified_time='$date' WHERE email='$email'";
+$sql = "UPDATE profilev2 SET telephone='$phone',modified_time='$date' WHERE email='$email'";
 if (mysqli_query($link, $sql)==TRUE) {
   } 
 else {
@@ -20,7 +20,7 @@ else {
 	}
 }
 if($c_address!=""){
-$sql = "UPDATE profile SET address='$c_address',modified_time='$date' WHERE email='$email'";
+$sql = "UPDATE profilev2 SET address='$c_address',modified_time='$date' WHERE email='$email'";
 if (mysqli_query($link, $sql)==TRUE) {
   } 
 else {
@@ -28,7 +28,7 @@ else {
 	}
 }
 if($stream!=""){
-$sql = "UPDATE profile SET stream='$stream',modified_time='$date' WHERE email='$email'";
+$sql = "UPDATE profilev2 SET stream='$stream',modified_time='$date' WHERE email='$email'";
 if (mysqli_query($link, $sql)==TRUE) {
   } 
 else {
