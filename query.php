@@ -12,8 +12,9 @@ div {
 </style>
   </head>
    <body>
-<div>
 <center>
+<div>
+
   <h1>For Password </h1> <hr>
       <form method="post" action=" ">
 	<center>	<p>email:<input type="text" name="email"><br><br>
@@ -23,11 +24,13 @@ div {
 	</center>	
     </form>
 </div>
+</center>
   </body>
 <?php
 include("database.php");
 extract($_POST);
 session_start();
+if(isset($submit)){
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $query = mysqli_real_escape_string($link, $_REQUEST['query']);
 
@@ -44,6 +47,7 @@ $query = mysqli_real_escape_string($link, $_REQUEST['query']);
 		//echo mysqli_error($link);
 		
 	}
+}
 
 ?>
 </html>
