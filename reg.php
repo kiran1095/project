@@ -2,7 +2,7 @@
 
 include("database.php");
 
-$sql="create table if not exists profilev2(id int(11) auto_increment primary key, name varchar(20) NOT NULL,email varchar(20) NOT NULL UNIQUE,password varchar(64)NOT NULL,address varchar(50)NOT NULL,telephone int(12)NOT NULL,comment varchar(20),stream varchar(25)NOT NULL,key1 varchar(15)NOT NULL,created_time datetime default current_timestamp,modified_time datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,deleted_flag tinyint(4)NOT NULL)";
+$sql="create table if not exists profilev2(user_id int(11) auto_increment primary key, name varchar(20) NOT NULL,email varchar(20) NOT NULL UNIQUE,password varchar(64)NOT NULL,address varchar(50)NOT NULL,telephone int(12)NOT NULL,comment varchar(20),stream varchar(25)NOT NULL,key1 varchar(15)NOT NULL,created_time datetime default current_timestamp,modified_time datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,deleted_flag tinyint(4)NOT NULL)";
 
 if(!mysqli_query($link,$sql))
 	echo mysqli_error($link);

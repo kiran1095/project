@@ -42,3 +42,15 @@ truncate tablename;
 create table tablename(create_time datetime default NULL on update current_TIMESTAMP);
 
 
+//to add foreign key constraint
+create table tablename (columnname datatype references (original)columnname( original_tablename)
+
+//to add a foreign key constraint to existing table
+ALTER table tablename
+add foreign key (column name) references (original)columnname( original_tablename);
+
+
+
+//to drop constraints for a table
+alter table tablename drop foreign key column_name;
+

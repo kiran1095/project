@@ -43,7 +43,7 @@ extract($_POST);
 session_start();
 if(isset($_POST['submit']))
 {
-	$rs=mysqli_query($link,"select * from profilev2 where email='$email' and password=md5('$password') and delete_flag=1");
+	$rs=mysqli_query($link,"select * from profilev2 where email='$email' and password=md5('$password') and deleted_flag=0");
 	if(mysqli_num_rows($rs)==1)
 	{
 		//echo '<script>alert("login completed")</script>';
